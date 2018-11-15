@@ -3,6 +3,9 @@ module.exports = {
     // http://conqueringthecommandline.com/book/ack_ag
     'ack',
     'ag',
+    'awscli',
+    'awslogs',
+    'base64',
     // Install GNU core utilities (those that come with macOS are outdated)
     // Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
     'coreutils',
@@ -28,52 +31,57 @@ module.exports = {
     // jq is a sort of JSON grep
     'jq',
     // Mac App Store CLI: https://github.com/mas-cli/mas
+    'jwt-cli',
     'mas',
     // Install some other useful utilities like `sponge`
-    'moreutils',
-    'nmap',
-    'openconnect',
+    //'moreutils',
+    //'nmap',
+    //'openconnect',
     'reattach-to-user-namespace',
     // better/more recent version of screen
     'homebrew/dupes/screen',
-    'tmux',
+    'ossp-uuid',
     'todo-txt',
     'tree',
-    'ttyrec',
+    //'ttyrec',
     // better, more recent vim
     'vim --with-override-system-vi',
-    'watch',
+    //'watch',
     // Install wget with IRI support
     'wget --enable-iri'
   ],
   cask: [
+    '1password',
     //'adium',
     //'amazon-cloud-drive',
+    'amazon-music',
     //'atom',
     // 'box-sync',
     //'comicbooklover',
+    'bartender',
     //'diffmerge',
     'docker', // docker for mac
     //'dropbox',
     //'evernote',
-    'flux',
-    'gpg-suite',
+    //'flux',
+    //'gpg-suite',
     //'ireadfast',
+    'intellij-idea',
     'iterm2',
     'little-snitch',
-    'macbreakz',
+    //'macbreakz',
     'micro-snitch',
-    'signal',
+    //'signal',
     //'macvim',
     'sizeup',
     //'sketchup',
     'slack',
-    'the-unarchiver',
+    'the-unarchiver'
     //'torbrowser',
     //'transmission',
-    'visual-studio-code',
+    //'visual-studio-code',
     //'vlc',
-    'xquartz'
+    //'xquartz'
   ],
   gem: [
   ],

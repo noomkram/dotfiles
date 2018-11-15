@@ -112,7 +112,7 @@ function tre(){
 }
 
 function weather() {
-  curl wttr.in/$1
+  curl wttr.in/chicago?u
 }
 function ipinfo(){
   curl ipinfo.io/$1

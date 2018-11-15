@@ -7,14 +7,16 @@ export ZSH_THEME="powerlevel9k/powerlevel9k"
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
 # https://github.com/bhilburn/powerlevel9k#customizing-prompt-segments
 # https://github.com/bhilburn/powerlevel9k/wiki/Stylizing-Your-Prompt
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status history)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir dir_writable)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status vcs)
 # colorcode test
 # for code ({000..255}) print -P -- "$code: %F{$code}This is how your text would look like%f"
 POWERLEVEL9K_NVM_FOREGROUND='000'
 POWERLEVEL9K_NVM_BACKGROUND='072'
 POWERLEVEL9K_SHOW_CHANGESET=true
 #export ZSH_THEME="random"
+
+POWERLEVEL9K_STATUS_OK=false
 
 # Set to this to use case-sensitive completion
 export CASE_SENSITIVE="true"
@@ -54,7 +56,9 @@ source /usr/local/opt/nvm/nvm.sh
 # load-nvmrc
 
 # Customize to your needs...
-# unsetopt correct
+unsetopt correct
+unsetopt share_history
+setopt no_share_history
 
 # run fortune on new terminal :)
 # fortune

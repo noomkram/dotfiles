@@ -201,6 +201,10 @@ if [[ "$CURRENTSHELL" != "/usr/local/bin/zsh" ]]; then
   ok
 fi
 
+if [[ ! -d "./oh-my-zsh/custom/plugins/zsh-nvm" ]]; then
+  git clone https://github.com/lukechilds/zsh-nvm oh-my-zsh/custom/plugins/zsh-nvm
+fi
+
 if [[ ! -d "./oh-my-zsh/custom/themes/powerlevel9k" ]]; then
   git clone https://github.com/bhilburn/powerlevel9k.git oh-my-zsh/custom/themes/powerlevel9k
 fi
@@ -619,12 +623,12 @@ defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 262144;o
 running "Follow the keyboard focus while zoomed in"
 defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool true;ok
 
-# running "Disable press-and-hold for keys in favor of key repeat"
-# defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false;ok
+running "Disable press-and-hold for keys in favor of key repeat"
+defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false;ok
 
-# running "Set a blazingly fast keyboard repeat rate"
-# defaults write NSGlobalDomain KeyRepeat -int 2
-# defaults write NSGlobalDomain InitialKeyRepeat -int 10;ok
+running "Set a blazingly fast keyboard repeat rate"
+defaults write NSGlobalDomain KeyRepeat -int 2
+defaults write NSGlobalDomain InitialKeyRepeat -int 5;ok
 
 running "Set language and text formats (english/US)"
 defaults write NSGlobalDomain AppleLanguages -array "en"
@@ -815,9 +819,9 @@ bot "Configuring Hot Corners"
 # running "Top left screen corner → Mission Control"
 # defaults write com.apple.dock wvous-tl-corner -int 2
 # defaults write com.apple.dock wvous-tl-modifier -int 0;ok
-running "Top right screen corner → Desktop"
-defaults write com.apple.dock wvous-tr-corner -int 4
-defaults write com.apple.dock wvous-tr-modifier -int 0;ok
+# running "Top right screen corner → Desktop"
+# defaults write com.apple.dock wvous-tr-corner -int 4
+# defaults write com.apple.dock wvous-tr-modifier -int 0;ok
 # running "Bottom right screen corner → Start screen saver"
 # defaults write com.apple.dock wvous-br-corner -int 5
 # defaults write com.apple.dock wvous-br-modifier -int 0;ok
@@ -1043,14 +1047,14 @@ running "Disable continuous spell checking"
 defaults write com.apple.messageshelper.MessageController SOInputLineSettings -dict-add "continuousSpellCheckingEnabled" -bool false;ok
 
 ###############################################################################
-bot "SizeUp.app"
-###############################################################################
-
-running "Start SizeUp at login"
-defaults write com.irradiatedsoftware.SizeUp StartAtLogin -bool true;ok
-
-running "Don’t show the preferences window on next start"
-defaults write com.irradiatedsoftware.SizeUp ShowPrefsOnNextStart -bool false;ok
+# bot "SizeUp.app"
+# ###############################################################################
+#
+# running "Start SizeUp at login"
+# defaults write com.irradiatedsoftware.SizeUp StartAtLogin -bool true;ok
+#
+# running "Don’t show the preferences window on next start"
+# defaults write com.irradiatedsoftware.SizeUp ShowPrefsOnNextStart -bool false;ok
 
 killall cfprefsd
 

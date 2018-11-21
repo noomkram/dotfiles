@@ -248,7 +248,7 @@ mas install 961632517  # Be Focused Pro (1.7.5)
 mas install 544878870  # Notefile (2.7.2)
 mas install 1206020918 # Battery Indicator (1.2.0)
 mas install 1019371109 # Balance Lock (1.0.5)
-
+#mas install 424389933  # Final Cut (10.4.4)
 
 bot "Installing vim plugins"
 # cmake is required to compile vim bundle YouCompleteMe
@@ -624,11 +624,11 @@ running "Follow the keyboard focus while zoomed in"
 defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool true;ok
 
 running "Disable press-and-hold for keys in favor of key repeat"
-defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false;ok
+defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool true;ok
 
 running "Set a blazingly fast keyboard repeat rate"
 defaults write NSGlobalDomain KeyRepeat -int 2
-defaults write NSGlobalDomain InitialKeyRepeat -int 5;ok
+defaults write NSGlobalDomain InitialKeyRepeat -int 15;ok
 
 running "Set language and text formats (english/US)"
 defaults write NSGlobalDomain AppleLanguages -array "en"
@@ -683,7 +683,7 @@ running "Show hidden files by default"
 defaults write com.apple.finder AppleShowAllFiles -bool true;ok
 
 running "Show all filename extensions"
-defaults write NSGlobalDomain AppleShowAllExtensions -bool true;ok
+defaults write NSGlobalDomain AppleShowAllExtensions -bool false;ok
 
 running "Show status bar"
 defaults write com.apple.finder ShowStatusBar -bool true;ok

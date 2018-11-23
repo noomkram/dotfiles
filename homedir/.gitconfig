@@ -60,7 +60,7 @@
   up = pull --rebase --autostash
 
   # least used
-  br = branch -a
+  br = branch -av
   s = status -s -u
   cl = log --stat -C -2
   c = commit

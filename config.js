@@ -22,6 +22,7 @@ module.exports = {
     // Install GNU `sed`, overwriting the built-in `sed`
     // so we can do "sed -i 's/foo/bar/' file" instead of "sed -i '' 's/foo/bar/' file"
     'gnu-sed --with-default-names',
+    'gradle',
     // upgrade grep so we can get things like inverted match (-v)
     'grep --with-default-names',
     // better, more recent grep
@@ -41,6 +42,7 @@ module.exports = {
     // better/more recent version of screen
     'homebrew/dupes/screen',
     'ossp-uuid',
+    'terraform',
     'todo-txt',
     'tree',
     //'ttyrec',

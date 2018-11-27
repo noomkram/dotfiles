@@ -81,6 +81,7 @@ module.exports = {
     // 'sizeup',
     //'sketchup',
     'slack',
+    'sublime-text',
     // 'the-unarchiver'
     //'torbrowser',
     //'transmission',

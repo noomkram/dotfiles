@@ -126,3 +126,10 @@ function fo() {
   IFS=$'\n' files=($(fzf-tmux --query="$1" --multi --select-1 --exit-0))
   [[ -n "$files" ]] && ${EDITOR:-vim} "${files[@]}"
 }
+
+# Removes downloads data.
+# The following query should return nothing after removing the download history.
+#   sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'select LSQuarantineDataURLString from LSQuarantineEvent'
+function clearDownloadHistory() {
+  sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'delete from LSQuarantineEvent'
+}

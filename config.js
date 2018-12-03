@@ -61,7 +61,6 @@ module.exports = {
     'bartender',
     // 'box-sync',
     //'comicbooklover',
-    'bartender',
     //'diffmerge',
     'docker', // docker for mac
     //'dropbox',

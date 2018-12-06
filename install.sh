@@ -240,16 +240,6 @@ read -p "  AppleID (john@foo.com): " APPLEID
 # make sure signed into Mac App Store
 mas signin $APPLEID
 
-# install macos apps
-# mas install 430798174  # HazeOver (1.8.1)
-# mas install 990588172  # Gestimer (1.2.5)
-# mas install 928871589  # Noizio (1.6.2)
-# mas install 961632517  # Be Focused Pro (1.7.5)
-# mas install 544878870  # Notefile (2.7.2)
-# mas install 1206020918 # Battery Indicator (1.2.0)
-# mas install 1019371109 # Balance Lock (1.0.5)
-# mas install 424389933  # Final Cut (10.4.4)
-
 bot "Installing vim plugins"
 # cmake is required to compile vim bundle YouCompleteMe
 # require_brew cmake
@@ -267,7 +257,21 @@ require_cask font-inconsolata-for-powerline
 require_cask font-roboto-mono
 require_cask font-roboto-mono-for-powerline
 require_cask font-source-code-pro
+require_cask font-fira-code
+require_cask font-fira-mono
+require_cask font-fira-mono-for-powerline
 ok
+
+# install macos apps
+bot "installing appstore apps"
+#require_brew mas install 430798174  # HazeOver (1.8.1)
+require_brew mas install 990588172  # Gestimer (1.2.5)
+# mas install 928871589  # Noizio (1.6.2)
+require_brew mas install 961632517  # Be Focused Pro (1.7.5)
+require_brew mas install 544878870  # Notefile (2.7.2)
+require_brew mas install 1206020918 # Battery Indicator (1.2.0)
+require_brew mas install 1019371109 # Balance Lock (1.0.5)
+#require_brew mas install 424389933  # Final Cut (10.4.4)
 
 if [[ -d "/Library/Ruby/Gems/2.0.0" ]]; then
   running "Fixing Ruby Gems Directory Permissions"
